@@ -1,0 +1,152 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+.cargando-pelicula {
+  text-align: center;
+}
+
+.cargando-imagen {
+  height: 50px;
+  position: relative;
+  left: 50%;
+  margin-left: -25px;
+  margin-bottom: 50px;
+}
+
+.moviecard {
+  font-family: 'Helvetica', sans-serif, 'Ariel';
+  position: relative;
+  background: #ffffff;
+  color: #555555;
+  margin: 50px auto;
+  width: 850px;
+  width: 80%;
+  min-height: 300px;
+  padding: 30px 30px 30px 30px;
+  -moz-box-shadow: -5px 5px 15px;
+  -webkit-box-shadow: -5px 5px 15px;
+  box-shadow: -5px 5px 15px;
+  border-radius: 5px;
+}
+.moviecard #movie-content {
+  opacity: 1;
+  width: 100%;
+  display: table;
+  transition: all 500ms ease-out;
+  position: relative;
+}
+.moviecard .movie-title {
+  font-size: 36px;
+  padding-bottom: 6px;
+  color: #333333;
+}
+.moviecard .movie-title .movie-year {
+  margin-left: 12px;
+  font-size: 16px;
+}
+.moviecard .movie-details {
+  font-size: 18px;
+  padding-bottom: 24px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.moviecard .movie-details span {
+  padding: 0px 6px;
+  border-right: 1px solid #dbdbdb;
+}
+.moviecard .movie-details span:last-child {
+  border: none;
+}
+.moviecard .movie-castcrew {
+  padding-top: 12px;
+  padding-left: 80px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.moviecard .movie-castcrew span.title {
+  color: #333333;
+  display: inline-block;
+  width: 80px;
+  font-weight: 600;
+}
+.moviecard .movie-synopsis {
+  margin: 24px 0px;
+  padding-top: 24px;
+  padding-left: 50px;
+  max-height: 130px;
+  height: 130px;
+  overflow-y: hidden;
+  width: 100%;
+}
+.moviecard .movie-ratings {
+  position: absolute;
+  right: 0px;
+}
+.moviecard .movie-ratings span.star {
+  display: inline-block;
+  margin-right: 12px;
+  color: #F0DE00;
+  font-size: 36px;
+}
+.moviecard .movie-ratings span.score {
+  font-size: 30px;
+  color: #333333;
+}
+.title{
+  padding-left: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.actors{
+  margin-top: 10%;
+}
+
+.opiniones {
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+}
+
+.opiniones h3 {
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  letter-spacing: .5em;
+  margin-bottom: 25px;
+}
+
+.opinion {
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  
+  background: rgba(255,175,75,1);
+  background: -moz-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,114,18,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,114,18,1)));
+  background: -webkit-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,114,18,1) 100%);
+  background: -o-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,114,18,1) 100%);
+  background: -ms-linear-gradient(left, rgba(255,175,75,1) 0%, rgba(255,114,18,1) 100%);
+  background: linear-gradient(to right, rgba(255,175,75,1) 0%, rgba(255,114,18,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff7212', GradientType=1 );
+
+}
+
+.opinion h4 {
+  font-size: 18px;
+  color: gray;
+  text-align: left;
+  font-weight: bold;
+  transition: text-align 1s ease-in-out;
+}
+
+.opinion span {
+  color: black;
+  font-size: 14px;
+}

@@ -1,0 +1,51 @@
+<hr>
+<h2 class="title">Peliculas</h2>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="thumbnails" *ngIf="peliculas != undefined; else elseBlock">
+      <div class="col-md-4" *ngFor="let pelicula of peliculas.results">
+        <div class="thumbnail">
+          <a routerLink="/details/{{pelicula.id}}">
+                  <img class="poster_path" src="https://image.tmdb.org/t/p/w640{{pelicula.poster_path}}" alt="{{pelicula.title}}">
+          </a>
+          <div class="caption">
+            <p class="flex">
+              <span class="movie-title" class="title-movie">{{pelicula.title}} </span>
+              <span><fa [name]="'star'"></fa> {{pelicula.vote_average}}</span>
+            </p>
+            <div class="flex">
+              <span><fa [name]="'calendar'"></fa> {{pelicula.release_date}}</span>
+              <div *ngIf="pelicula.adult; else ATP"><span><fa [name]="'child'"></fa>+18</span></div>
+              <ng-template #ATP><span><fa [name]="'child'"></fa>ATP</span></ng-template>
+            </div>
+            <p class="overview">{{pelicula.overview}}</p>
+            <p align="center"><a routerLink="/details/{{pelicula.id}}" class="btn btn-primary btn-block btn-edited">Mas Información</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="thumbnail thumbpaging">
+          
+          <button (click)="avPage($event)" class="btnpaging text-center hvr-wobble-top"><span class="glyphicon glyphicon-arrow-right"></span></button>
+          <button (click)="rePage($event)" class="btnpaging text-center hvr-wobble-bottom"><span class="glyphicon glyphicon-arrow-left"></span></button>      
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <ng-template #elseBlock>
+      <div class="col-md-12 text-center">
+        <h3 class="loading-title">Cargando Peliculas...</h3>
+        <i class="fa fa-circle-o-notch fa-spin" style="font-size:50px"></i>
+      </div>
+    </ng-template>
+
+
+
+
+  </div>
+</div>
